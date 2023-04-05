@@ -1,3 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,200;1,300&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+   .image-model1 {
+      position: absolute;
+      width: 50%;
+      right: 0;
+      bottom: -6.3em;
+   }
+}
+
+@layer base {
+   html {
+      font-family: "Poppins", sans-serif;
+   }
+}
+
+svg text {
+   font-family: "Poppins", sans-serif;
+}
+
+.container-home {
+   background-image: url(../assets/images/bg2.svg);
+   @apply bg-no-repeat bg-center;
+}
+
+.home-section {
+   border: solid 1px transparent;
+   border-top: none;
+   background-image: url(../assets/images/bg2.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   overflow: hidden;
+}
+
+.home-section-manajemen {
+   background-image: url(../assets/images/bg2.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   overflow: hidden;
+   min-height: 768px;
+   /* height: calc(100vh * 0.5625); */
+}
+
+.home-section2 {
+   position: relative;
+}
+
+.home-section2::before {
+   width: 400px;
+   height: 7rem;
+   background-color: #000;
+   position: absolute;
+   right: 0;
+   top: 0;
+}
+
+.home-section3 {
+   background-image: url(../assets/images/bg2.svg);
+   background-position: center;
+   transform: rotate(180deg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+}
+
+.image-model {
+   @apply image-model1;
+}
+
+.tagline {
+   @apply text-sm md:text-lg font-bold;
+}
+
+.footer-text {
+   @apply text-sm;
+}
+
+.partner-logo {
+   @apply overflow-hidden md:w-[7rem] md:h-24 xl:w-[10rem] xl:h-32  flex justify-center items-center;
+}
+
+.service-icon {
+   @apply mt-5 flex justify-start items-center flex-col w-[10rem] h-[10rem];
+}
+.service-icon p {
+   @apply text-xs;
+}
+.service-icon img {
+   @apply h-1/2 w-full object-scale-down;
+}
+.service-icon-mobile {
+   @apply flex justify-start items-center w-1/2  flex-col;
+}
+.service-icon-mobile img {
+   @apply object-scale-down;
+}
+.service-icon-mobile p {
+   @apply text-xs;
+}
+
+.mobile-view {
+   @apply block lg:hidden;
+}
+
+.desktop-view {
+   @apply hidden lg:block;
+}
+.desktop-view section {
+   min-height: 710px;
+}
+
+.model {
+   bottom: -6rem;
+}
+
+@media screen and (min-height: 714px) {
+   .desktop-view section {
+      height: 100vh;
+   }
+
+   .model {
+      @apply bottom-[-5rem];
+   }
+}
+
+.mobile-menu {
+   background: linear-gradient(
+      to bottom,
+      rgba(252, 29, 36, 0.8),
+      rgba(247, 149, 32, 0.8)
+   );
+}
+
+.mobile-home-container {
+   width: 100%;
+   height: 100vh;
+}
+
+/* .ornament {
+   background: linear-gradient(
+      to right bottom,
+      white 50%,
+      rgba(247, 149, 32, 0.8) 50%
+   );
+} */
+
+.ornament {
+   background-image: url("../assets/backgroundmobile.svg");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.ornament2 {
+   background-image: url("../assets/bgwave.svg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position-x: center;
+}
+
+.bg-diagonal {
+   background: linear-gradient(
+      to right bottom,
+      white 45%,
+      rgba(247, 149, 32, 0.8)
+   );
+   width: 100%;
+   height: 30%;
+   position: absolute;
+   z-index: -1;
+}
+
+.diagonal2 {
+   -webkit-transform: scaleY(-1);
+   transform: scaleY(-1);
+}
+
+.partner-logo-mobile {
+   @apply overflow-hidden flex space-x-10 items-center  h-20 w-24;
+}
+
+.partner-logo-mobile img {
+   object-fit: contain !important;
+   /* background-color: rgba(0, 128, 0, 0.603); */
+}
+
+.foto-manajemen-mobile {
+   @apply flex-1 flex flex-col justify-center items-center m-2 px-3 w-full;
+}
+
+.foto-manajemen-mobile img {
+   @apply w-1/2  object-cover;
+}
+.foto-manajemen-mobile div {
+   @apply w-full px-3 bg-gray-300/70 py-2 rounded-lg shadow-md;
+}
+
+.foto-manajemen-mobile h3 {
+   @apply text-xl font-bold;
+}
+
+.foto-manajemen-mobile h5 {
+   @apply text-lg font-bold;
+}
+
+.foto-manajemen-desktop {
+   width: calc(100vw / 5);
+   height: calc(768px * 0.45);
+   /* background-color: #fff; */
+   @apply flex flex-col justify-start items-center;
+}
+
+.foto-manajemen-desktop img {
+   /* height: calc; */
+   @apply w-2/3 h-1/2 object-contain;
+}
+.foto-manajemen-desktop div {
+   /* height: 50%; */
+   @apply w-full p-3 bg-gray-300/70 rounded-lg shadow-md h-2/3 text-justify;
+}
+
+.foto-manajemen-desktop h3 {
+   @apply xl:text-lg font-bold;
+}
+
+.foto-manajemen-desktop h5 {
+   @apply lg:text-sm sm:text-base font-bold;
+}
+.foto-manajemen-desktop p {
+   @apply text-xs;
+}
+
+.logo-group-desktop {
+   @apply w-[50%] h-36  p-1 text-center text-xs space-y-2 flex justify-center items-center flex-col font-bold text-gray-800 rounded-md;
+}
+
+.logo-group-desktop img {
+   @apply object-contain w-1/2;
+}
+
+.logo-group-mobile {
+   @apply w-[40%] h-36 bg-gray-400/20 p-1 text-center text-xs space-y-2 flex justify-evenly items-center flex-col font-bold text-gray-800 rounded-md;
+}
+
+.logo-group-mobile img {
+   @apply object-contain w-2/3;
+}
+
+.layanan-desktop {
+   @apply min-h-[12rem] flex flex-col space-y-3 rounded-md items-center justify-start bg-gray-300/70 px-2 pb-2;
+}
+
+.layanan-desktop p {
+   @apply flex-[2] text-xs text-gray-800;
+}
+
+.layanan-desktop img {
+   @apply flex-[1]  mt-5;
+}
+
+.layanan-mobile {
+   @apply w-2/3  flex flex-col rounded-md items-center justify-start bg-gray-300/70 px-2 pb-2;
+}
+
+.layanan-mobile p {
+   @apply text-xs  text-gray-800;
+}
+
+.layanan-mobile img {
+   @apply w-1/3 mt-5;
+}
