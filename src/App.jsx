@@ -29,16 +29,8 @@ function App() {
                <Route path="/kontak" element={<Kontak />} />
                <Route path="/vpc" element={<ViewportChecker />} />
             </Routes>
-            <div
-               className="fixed right-10 bottom-10 z-50"
-               title="Whatsapp Kami"
-            >
-               <Fab
-                  variant="circular"
-                  size="large"
-                  color="success"
-                  aria-label="add"
-               >
+            <div className="fixed right-10 bottom-10 z-50" title="Whatsapp Kami">
+               <Fab variant="circular" size="large" color="success" aria-label="add" onClick={() => window.open("https://wa.me/+6285219493972", "_blank")}>
                   <WhatsApp style={{ fontSize: 35, color: "white" }} />
                </Fab>
             </div>

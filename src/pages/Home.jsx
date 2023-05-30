@@ -63,7 +63,13 @@ function Home() {
                         <p className="tagline">Information Technology</p>
                         <p className="tagline">Human Resource Management</p>
                      </div>
-                     <div className="bg-[#1E458A] font-bold flex justify-center  text-xs md:text-base md:w-40 py-2 p-4 rounded-md text-white mx-auto md:mt-20">
+                     <div
+                        onClick={() => {
+                           window.location.href =
+                              "mailto:info.admin@sckb.co.id";
+                        }}
+                        className="bg-[#1E458A] font-bold flex justify-center  text-xs md:text-base md:w-40 py-2 p-4 rounded-md text-white mx-auto md:mt-20"
+                     >
                         <Link to="#">Hubungi Kami</Link>
                      </div>
                   </div>
@@ -230,7 +236,13 @@ function Home() {
                         </p>
                      </div>
                      <div className="flex justify-center items-center">
-                        <div className="font-bold text-xl bg-[#1E458A] text-white px-4 py-2  text-center rounded-xl">
+                        <div
+                           onClick={() => {
+                              window.location.href =
+                                 "mailto:info.admin@sckb.co.id";
+                           }}
+                           className="font-bold text-xl bg-[#1E458A] text-white px-4 py-2  text-center rounded-xl"
+                        >
                            <Link to="#">Hubungi kami</Link>
                         </div>
                      </div>
@@ -273,7 +285,13 @@ function Home() {
                      <p className="tagline">Financial Consultant</p>
                      <p className="tagline">Information Technology</p>
                      <p className="tagline">Human Resource Management</p>
-                     <div className="bg-[#1E458A] font-bold flex justify-center text-xs py-2 w-1/2 rounded-md text-white mx-auto mt-20">
+                     <div
+                        onClick={() => {
+                           window.location.href =
+                              "mailto:info.admin@sckb.co.id";
+                        }}
+                        className="bg-[#1E458A] font-bold flex justify-center text-xs py-2 w-1/2 rounded-md text-white mx-auto mt-20"
+                     >
                         <Link to="#">Hubungi Kami</Link>
                      </div>
                   </div>
@@ -442,7 +460,13 @@ function Home() {
                            pertumbuhan bisnis anda
                         </p>
 
-                        <div className="bg-[#1E458A] font-bold flex justify-center text-xs py-2 w-1/2 rounded-md text-white mx-auto mt-20">
+                        <div
+                           onClick={() => {
+                              window.location.href =
+                                 "mailto:info.admin@sckb.co.id";
+                           }}
+                           className="bg-[#1E458A] font-bold flex justify-center text-xs py-2 w-1/2 rounded-md text-white mx-auto mt-20"
+                        >
                            <Link to="#">Hubungi Kami</Link>
                         </div>
                      </div>

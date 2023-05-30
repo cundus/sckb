@@ -7,6 +7,12 @@ import logoLink from "../static/assets/images/logo-socmed/logo_li.svg";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space, Typography, Button } from "antd";
 
+const sosmed = {
+   ig: "https://www.instagram.com/sckbgroup/",
+   linkedin:
+      "https://www.linkedin.com/in/sinergi-cipta-kreasi-bersama-1b7306271/",
+};
+
 const route = [
    {
       to: "/",
@@ -33,8 +39,34 @@ const route = [
       title: "Kontak",
       menu: false,
    },
+   {
+      to: "#",
+      title: "Karir",
+      menu: true,
+   },
 ];
-
+const subKarir = [
+   {
+      label: (
+         <Link
+            to="#"
+            onClick={() => {
+               window.open("https://sjbt.net/e-recruitment/login", "_blank");
+            }}
+         >
+            <Typography
+               style={{
+                  textAlign: "center",
+                  fontWeight: "bold",
+               }}
+            >
+               Isi CV
+            </Typography>
+         </Link>
+      ),
+      key: "0",
+   },
+];
 const subRoute = [
    {
       label: (
@@ -118,8 +150,9 @@ function Navbar() {
                   <img src={LogoSCKB} alt="logo" className="w-12 md:w-40" />
                </Link>
                <div className=" space-x-5 hidden md:flex">
-                  <Link to="#">
+                  <Link to={{ pathname: sosmed.ig }} target="_blank">
                      <div
+                        onClick={() => window.open(sosmed.ig, "_blank")}
                         title="Instagram SCKB"
                         className="w-14 h-14 flex justify-center items-center overflow-hidden"
                      >
@@ -132,6 +165,7 @@ function Navbar() {
                   </Link>
                   <Link to="#">
                      <div
+                        onClick={() => window.open(sosmed.linkedin, "_blank")}
                         title="LinkedIn SCKB"
                         className="w-14 h-14 flex justify-center items-center overflow-hidden"
                      >
@@ -150,7 +184,10 @@ function Navbar() {
                            {item.menu ? (
                               <Dropdown
                                  menu={{
-                                    items: subRoute,
+                                    items:
+                                       item.title == "Karir"
+                                          ? subKarir
+                                          : subRoute,
                                  }}
                                  placement="bottomLeft"
                                  trigger={["click"]}
@@ -227,7 +264,8 @@ function Navbar() {
                         {item.menu ? (
                            <Dropdown
                               menu={{
-                                 items: subRoute,
+                                 items:
+                                    item.title == "Karir" ? subKarir : subRoute,
                               }}
                               placement="bottomLeft"
                               trigger={["click"]}
@@ -261,6 +299,37 @@ function Navbar() {
                         )}
                      </li>
                   ))}
+
+                  <li className="space-x-5 flex">
+                     <Link to="#">
+                        <div
+                           onClick={() => window.open(sosmed.ig, "_blank")}
+                           title="Instagram SCKB"
+                           className="w-14 h-14 flex justify-center items-center overflow-hidden"
+                        >
+                           <img
+                              src={logoIG}
+                              alt="ig"
+                              className="w-24 h-24 object-cover"
+                           />
+                        </div>
+                     </Link>
+                     <Link to="#">
+                        <div
+                           onClick={() =>
+                              window.open(sosmed.linkedin, "_blank")
+                           }
+                           title="LinkedIn SCKB"
+                           className="w-14 h-14 flex justify-center items-center overflow-hidden"
+                        >
+                           <img
+                              src={logoLink}
+                              alt="li"
+                              className="w-24 h-24 object-cover"
+                           />
+                        </div>
+                     </Link>
+                  </li>
                </ul>
             </div>
          </div>
